@@ -391,6 +391,11 @@
     react-dom "18.2.0"
     tw-to-css "0.0.12"
 
+"@react-email/tailwind@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@react-email/tailwind/-/tailwind-1.0.5.tgz#be09d397be4551970b159309c16be4bca3c1ff39"
+  integrity sha512-BH00cZSeFfP9HiDASl+sPHi7Hh77W5nzDgdnxtsVr/m3uQD9g180UwxcE3PhOfx0vRdLzQUU8PtmvvDfbztKQg==
+
 "@react-email/text@0.0.6":
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/@react-email/text/-/text-0.0.6.tgz#c28a2b70f3e17de8e93e3fbdf9a18afff3623a29"

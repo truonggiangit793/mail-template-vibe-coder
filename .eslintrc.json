@@ -9,11 +9,7 @@
   ],
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "simple-import-sort",
-    "import"
-  ],
+  "plugins": ["@typescript-eslint", "simple-import-sort", "import"],
   "rules": {
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
@@ -27,45 +23,24 @@
   "overrides": [
     // override "simple-import-sort" config
     {
-      "files": [
-        "*.js",
-        "*.jsx",
-        "*.ts",
-        "*.tsx"
-      ],
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
       "rules": {
         "simple-import-sort/imports": [
           "error",
           {
             "groups": [
               // Packages `react` related packages come first.
-              [
-                "^react",
-                "^@?\\w"
-              ],
+              ["^react", "^@?\\w"],
               // Internal packages.
-              [
-                "^(@|components)(/.*|$)"
-              ],
+              ["^(@|components)(/.*|$)"],
               // Side effect imports.
-              [
-                "^\\u0000"
-              ],
+              ["^\\u0000"],
               // Parent imports. Put `..` last.
-              [
-                "^\\.\\.(?!/?$)",
-                "^\\.\\./?$"
-              ],
+              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
               // Other relative imports. Put same-folder imports and `.` last.
-              [
-                "^\\./(?=.*/)(?!/?$)",
-                "^\\.(?!/?$)",
-                "^\\./?$"
-              ],
+              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
               // Style imports.
-              [
-                "^.+\\.?(css)$"
-              ]
+              ["^.+\\.?(css)$"]
             ]
           }
         ]
