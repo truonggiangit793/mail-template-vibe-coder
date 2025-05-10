@@ -1,119 +1,59 @@
-import { CSSProperties } from 'react';
 import { Column, Container, Img, Link, Row, Section, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
+import { CSSProperties } from 'react';
 
 export default function ReactMailContent() {
-  const textStyle: CSSProperties = { margin: 0 };
-
-  const avatarStyle: CSSProperties = { borderRadius: 100 };
-
-  const userPayload: UserPayload = {
-    phone: '+84702907154',
-    address: 'Ho Chi Minh City',
-    logo: 'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/logo.png',
-    avatar: 'https://avatars.githubusercontent.com/u/73239209',
-    regards:
-      'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/regards.png',
-    fullname:
-      'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/name.png',
-    jobTitle:
-      'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/job-title.png',
-    facebook:
-      'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/facebook.png',
-    instagram:
-      'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/instagram.png',
-    linkedin:
-      'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/linkedin.png',
-    github:
-      'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/github.png',
-    footer:
-      'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/footer.png',
-    phoneIcon:
-      'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/phone.png',
-    locationIcon:
-      'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/gps.png',
-  };
+  const containerStyle: CSSProperties = { maxWidth: '50em' };
 
   return (
     <Tailwind>
-      <Section className='bg-gray-200 rounded p-2'>
-        <Container className='bg-white rounded overflow-hidden'>
-          <Section className='px-3 bg-[#7bd8e7]'>
-            <Img height='40' src={userPayload.logo} />
-          </Section>
+      <Section className='bg-[#f8fafa] rounded px-2 py-6'>
+        <Container style={containerStyle} className='mb-4'>
+          <Img height='45' src={'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/logo.png'} />
+        </Container>
 
-          <Section className='p-3'>
-            <Text style={textStyle}>Dear,</Text>
-            <Text style={textStyle}>Replace your content here...</Text>
+        <Container className='bg-white rounded overflow-hidden px-6' style={{ ...containerStyle, border: '1px solid #eee' }}>
+          <Section className='pt-6 pb-3'>
+            <Text className='m-0 mb-2 text-lg font-bold'>Dear REPLACE,</Text>
+            <Text className='m-0 text-lg'>Replace your content here...</Text>
           </Section>
+          <Img className='mb-6' height='38' src={'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/regards.png'} />
+        </Container>
 
-          <Section className='p-3'>
-            <Img width='80' src={userPayload.regards} />
-          </Section>
-
-          <Row className='px-3'>
-            <Column className='pr-4'>
-              <Img width='100' src={userPayload.logo} style={avatarStyle} />
+        <Container style={containerStyle}>
+          <Row className='mt-3'>
+            <Column className='pr-3'>
+              <Img height='90' src={'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/logo.png'} />
             </Column>
             <Column className='w-full'>
-              <Img width='180' src={userPayload.fullname} />
-              <Img width='140' src={userPayload.jobTitle} />
+              <Img height='30' src={'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/name.png'} />
+              <Img height='20' src={'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/job-title.png'} />
             </Column>
           </Row>
 
-          <Row className='px-3'>
-            <Column className='pr-4'>
-              <Row>
-                <Column className='pr-1'>
-                  <Img height='14' src={userPayload.phoneIcon} />
-                </Column>
-                <Column className='pr-1'>
-                  <Text style={textStyle}>Contact:</Text>
-                </Column>
-                <Column className='pr-1 w-full'>
-                  <Link href={'tel:' + userPayload.phone}>
-                    <Text style={textStyle}>{userPayload.phone}</Text>
-                  </Link>
-                </Column>
-              </Row>
-            </Column>
+          <Text className='m-0'>Contact: <Link href={'tel:+84702907154'}>+84702907154</Link></Text>
+          <Text className='m-0'>Primary email: <Link href={'mailto:truonggiangit793@gmail.com'}>truonggiangit793@gmail.com</Link></Text>
+          <Text className='m-0'>Address: <Link href={'https://www.google.com/maps/place/Ho+Chi+Minh+City'}>Ho Chi Minh City, Viet Nam</Link></Text>
 
-            <Column className='w-full'>
-              <Row>
-                <Column className='pr-1'>
-                  <Img height='14' src={userPayload.locationIcon} />
-                </Column>
-                <Column className='pr-1'>
-                  <Text style={textStyle}>Address:</Text>
-                </Column>
-                <Column className='pr-1 w-full'>
-                  <Link href={'https://www.google.com/maps/place/' + userPayload.address}>
-                    <Text style={textStyle}>{userPayload.address}</Text>
-                  </Link>
-                </Column>
-              </Row>
-            </Column>
-          </Row>
-
-          <Row className='p-3'>
+          <Row className='mt-3 mb-4'>
             <Column className='pr-1'>
               <Link href='https://www.facebook.com/truonggiangit793'>
-                <Img height='25' src={userPayload.facebook} />
+                <Img height='25' src={'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/facebook.png'} />
               </Link>
             </Column>
             <Column className='pr-1'>
               <Link href='https://www.instagram.com/truonggiangit793'>
-                <Img height='25' src={userPayload.instagram} />
+                <Img height='25' src={'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/instagram.png'} />
               </Link>
             </Column>
             <Column className='pr-1'>
               <Link href='https://linkedin.com/in/truonggiangit793'>
-                <Img height='25' src={userPayload.linkedin} />
+                <Img height='25' src={'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/linkedin.png'} />
               </Link>
             </Column>
             <Column className='pr-1 w-full'>
               <Link href='https://github.com/truonggiangit793'>
-                <Img height='25' src={userPayload.github} />
+                <Img height='25' src={'https://raw.githubusercontent.com/truonggiangit793/gmail-signature-materials/refs/heads/main/src/assets/png/github.png'} />
               </Link>
             </Column>
           </Row>
