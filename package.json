@@ -1,0 +1,36 @@
+{
+  "name": "gmail-signature-template",
+  "version": "25.5.9",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint-fix": "yarn lint-fix:es && yarn lint-fix:prettier",
+    "lint-fix:es": "yarn lint:es -- --fix",
+    "lint-fix:prettier": "yarn lint:prettier -- --write"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^13.4.19",
+    "@react-email/components": "^0.0.11",
+    "@react-email/render": "^0.0.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20.5.7",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.48.0",
+    "eslint-config-next": "^13.4.19",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier": "^3.0.3",
+    "react-use": "^17.4.0",
+    "typescript": "^5.1.6"
+  }
+}
