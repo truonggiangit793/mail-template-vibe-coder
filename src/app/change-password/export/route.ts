@@ -6,5 +6,5 @@ import ChangePasswordPage from '@/app/change-password/page';
 
 export async function GET() {
   const template = render(ReactMailWrapper({ children: ChangePasswordPage() }));
-  return new NextResponse(template)
+  return new NextResponse(template);
 }

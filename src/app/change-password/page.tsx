@@ -38,14 +38,28 @@ export default function ChangePasswordPage() {
           </Text>
 
           <Text className='text-gray-600 leading-relaxed m-0 mb-4'>
-            Chúng tôi gửi email này để xác nhận rằng mật khẩu tài khoản của bạn đã được thay đổi thành công vào lúc <b>CHANGE_DATETIME</b>.
+            Chúng tôi gửi email này để xác nhận rằng mật khẩu tài khoản của bạn đã được thay đổi
+            thành công vào lúc <b>CHANGE_DATETIME</b>.
           </Text>
 
           <Container className='bg-blue-50 rounded-lg p-4 mb-6'>
-            <Text className='text-blue-800 font-medium m-0 mb-2'><b>Thông Báo Bảo Mật Quan Trọng:</b> Nếu bạn không phải là người thực hiện thay đổi này, vui lòng thực hiện ngay các bước sau:</Text>
+            <Text className='text-blue-800 font-medium m-0 mb-2'>
+              <b>Thông Báo Bảo Mật Quan Trọng:</b> Nếu bạn không phải là người thực hiện thay đổi
+              này, vui lòng thực hiện ngay các bước sau:
+            </Text>
             <ul className='m-0 px-4 mt-2'>
-              <li className='m-0 text-blue-800'>Liên hệ đội ngũ bảo mật của chúng tôi qua email: <Link className='text-blue-700 font-medium' href='mailto:SUPPORT_EMAIL'>SUPPORT_EMAIL</Link></li>
-              <li className='m-0 text-blue-800'>Gọi đường dây hỗ trợ 24/7: <Link className='text-blue-700 font-medium' href='tel:SUPPORT_PHONE'>SUPPORT_PHONE</Link></li>
+              <li className='m-0 text-blue-800'>
+                Liên hệ đội ngũ bảo mật của chúng tôi qua email:{' '}
+                <Link className='text-blue-700 font-medium' href='mailto:SUPPORT_EMAIL'>
+                  SUPPORT_EMAIL
+                </Link>
+              </li>
+              <li className='m-0 text-blue-800'>
+                Gọi đường dây hỗ trợ 24/7:{' '}
+                <Link className='text-blue-700 font-medium' href='tel:SUPPORT_PHONE'>
+                  SUPPORT_PHONE
+                </Link>
+              </li>
             </ul>
           </Container>
 
@@ -55,24 +69,24 @@ export default function ChangePasswordPage() {
 
           <ul className='m-0 px-4 mb-10'>
             <li className='m-0'>
-              <Text className='m-0 text-gray-600'>Kiểm tra lại các hoạt động gần đây trên tài khoản</Text>
+              <Text className='m-0 text-gray-600'>
+                Kiểm tra lại các hoạt động gần đây trên tài khoản
+              </Text>
             </li>
             <li className='m-0'>
               <Text className='m-0 text-gray-600'>Kích hoạt xác thực hai lớp</Text>
             </li>
             <li className='m-0'>
-              <Text className='m-0 text-gray-600'>Cập nhật mật khẩu tương tự trên các tài khoản khác</Text>
+              <Text className='m-0 text-gray-600'>
+                Cập nhật mật khẩu tương tự trên các tài khoản khác
+              </Text>
             </li>
           </ul>
 
           <hr className='border-gray-200 mb-6' />
 
-          <Text className='text-gray-600 m-0 mb-4'>
-            Trân trọng,
-          </Text>
-          <Text className='text-gray-800 font-semibold m-0'>
-            iGap SME Security Team
-          </Text>
+          <Text className='text-gray-600 m-0 mb-4'>Trân trọng,</Text>
+          <Text className='text-gray-800 font-semibold m-0'>iGap SME Security Team</Text>
         </Container>
       </Section>
 

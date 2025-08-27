@@ -6,5 +6,5 @@ import MyTemplatePage from '@/app/my-template/page';
 
 export async function GET() {
   const template = render(ReactMailWrapper({ children: MyTemplatePage() }));
-  return new NextResponse(template)
+  return new NextResponse(template);
 }

@@ -9,12 +9,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: DefaultProps) {
   const main: CSSProperties = {
     backgroundColor: '#fff',
-    fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
+    fontFamily:
+      '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
   };
 
   return (
     <html lang='en'>
-      <body suppressHydrationWarning={true} style={main}>{children}</body>
+      <body suppressHydrationWarning={true} style={main}>
+        {children}
+      </body>
     </html>
   );
 }
