@@ -1,5 +1,9 @@
-
+import { Tailwind } from '@react-email/tailwind';
 
 export default function Page() {
-  return <h1>Home Page</h1>;
+  return (
+    <Tailwind>
+      <h1>Hello</h1>
+    </Tailwind>
+  );
 }
