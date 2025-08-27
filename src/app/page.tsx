@@ -9,7 +9,7 @@ export default function Page() {
           {/* Hero Section */}
           <Section className="text-center mb-12">
             <Text className="text-4xl font-extrabold text-blue-600 mb-4">
-              Mail Template Vide Coder
+              Mail Template Vibe Coder
             </Text>
             <Text className="text-xl text-gray-600 mb-8">
               Transform your email development workflow with our powerful React-based email template builder

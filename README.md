@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mail Template Vibe Coder
+
+Transform your email development workflow with our powerful React-based email template builder. Built with Next.js and modern web technologies to make email template development a breeze.
+
+## Features
+
+- 🎨 **React Components** - Build email templates using familiar React components and patterns
+- 🎯 **Tailwind Styling** - Style your templates with the power of Tailwind CSS utility classes
+- 📤 **Easy Export** - Export your templates to clean HTML with a single URL endpoint
+- 📱 **Responsive** - Create email templates that look great on any device
 
 ## Getting Started
 
@@ -16,21 +25,23 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quick Start Guide 🚀
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Create Template Directory**
+   - Create a new folder at `src/app/[template-name]`
 
-## Learn More
+2. **Add Components**
+   - Import and use components from `@react-email/components`
 
-To learn more about Next.js, take a look at the following resources:
+3. **Style with Tailwind**
+   - Use Tailwind CSS classes to create beautiful designs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Export Template**
+   - Access `/[template-name]/export` to get the HTML version
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Available Templates ✨
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Sample Email Template
+A professional email template with logo, social links, and responsive design
+- View the template at: `/my-template`
+- Get HTML source at: `/my-template/export`
