@@ -167,6 +167,23 @@ export default function Page() {
                 </Column>
               </Row>
             </Section>
+
+            <Section className='py-4'>
+              <Row>
+                <Column className='w-3/4'>
+                  <Link
+                    href='/verify-account'
+                    className='m-0 text-xl font-semibold text-blue-600 hover:text-blue-800 block'
+                  >
+                    → Verify Account Email Template
+                  </Link>
+                  <Text className='m-0 text-gray-600'>
+                    A clean and effective email template to help users verify their accounts quickly
+                    and securely. <Link href='/verify-account/export'>View HTML Source</Link>
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
           </Section>
         </Container>
       </Section>
