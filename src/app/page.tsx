@@ -1,5 +1,5 @@
-import ReactMailContent from '@/app/components/ReactMailContent';
+
 
 export default function Page() {
-  return <ReactMailContent />;
+  return <h1>Home Page</h1>;
 }
