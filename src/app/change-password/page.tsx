@@ -36,45 +36,45 @@ export default function Page() {
         <Section className='px-4 py-8'>
           <Container style={containerStyle}>
             <Text className='text-gray-800 text-xl font-semibold m-0 mb-6'>
-              Password Change Confirmation
+              Xác Nhận Thay Đổi Mật Khẩu
             </Text>
 
             <Text className='text-gray-600 leading-relaxed m-0 mb-4'>
-              Hello <b>USER_NAME</b>,
+              Xin chào <b>USER_NAME</b>,
             </Text>
 
             <Text className='text-gray-600 leading-relaxed m-0 mb-4'>
-              We are writing to confirm that your account password was successfully changed on <b>CHANGE_DATETIME</b>.
+              Chúng tôi gửi email này để xác nhận rằng mật khẩu tài khoản của bạn đã được thay đổi thành công vào lúc <b>CHANGE_DATETIME</b>.
             </Text>
 
             <Container className='bg-blue-50 rounded-lg p-4 mb-6'>
-              <Text className='text-blue-800 font-medium m-0 mb-2'><b>Important Security Notice:</b> If you did not initiate this password change, please take immediate action by:</Text>
+              <Text className='text-blue-800 font-medium m-0 mb-2'><b>Thông Báo Bảo Mật Quan Trọng:</b> Nếu bạn không phải là người thực hiện thay đổi này, vui lòng thực hiện ngay các bước sau:</Text>
               <ul className='m-0 px-4 mt-2'>
-                <li className='m-0 text-blue-800'>Contacting our security team at <Link className='text-blue-700 font-medium' href='mailto:SUPPORT_EMAIL'>SUPPORT_EMAIL</Link></li>
-                <li className='m-0 text-blue-800'>Calling our 24/7 support line: <Link className='text-blue-700 font-medium' href='tel:SUPPORT_PHONE'>SUPPORT_PHONE</Link></li>
+                <li className='m-0 text-blue-800'>Liên hệ đội ngũ bảo mật của chúng tôi qua email: <Link className='text-blue-700 font-medium' href='mailto:SUPPORT_EMAIL'>SUPPORT_EMAIL</Link></li>
+                <li className='m-0 text-blue-800'>Gọi đường dây hỗ trợ 24/7: <Link className='text-blue-700 font-medium' href='tel:SUPPORT_PHONE'>SUPPORT_PHONE</Link></li>
               </ul>
             </Container>
 
             <Text className='text-gray-600 leading-relaxed m-0 mb-4'>
-              To ensure continued security of your account, we recommend:
+              Để đảm bảo tính bảo mật cho tài khoản của bạn, chúng tôi khuyến nghị:
             </Text>
 
             <ul className='m-0 px-4 mb-10'>
               <li className='m-0'>
-                <Text className='m-0 text-gray-600'>Review your recent account activity</Text>
+                <Text className='m-0 text-gray-600'>Kiểm tra lại các hoạt động gần đây trên tài khoản</Text>
               </li>
               <li className='m-0'>
-                <Text className='m-0 text-gray-600'>Enable two-factor authentication</Text>
+                <Text className='m-0 text-gray-600'>Kích hoạt xác thực hai lớp</Text>
               </li>
               <li className='m-0'>
-                <Text className='m-0 text-gray-600'>Update any similar passwords on other accounts</Text>
+                <Text className='m-0 text-gray-600'>Cập nhật mật khẩu tương tự trên các tài khoản khác</Text>
               </li>
             </ul>
 
             <hr className='border-gray-200 mb-6' />
 
             <Text className='text-gray-600 m-0 mb-4'>
-              Best regards,
+              Trân trọng,
             </Text>
             <Text className='text-gray-800 font-semibold m-0'>
               iGap SME Security Team
@@ -102,7 +102,7 @@ export default function Page() {
             </Section>
 
             <Text className='text-gray-400 text-xs m-0 mt-6'>
-              This is an automated message, please do not reply directly to this email.
+              Đây là email tự động, vui lòng không trả lời trực tiếp email này.
             </Text>
           </Container>
         </Section>
