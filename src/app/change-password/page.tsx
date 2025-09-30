@@ -17,12 +17,12 @@ export default function ChangePasswordPage() {
         <Text className='text-gray-800 text-xl font-semibold'>Xác Nhận Thay Đổi Mật Khẩu</Text>
 
         <Text className='text-gray-600'>
-          Xin chào <b>USER_NAME</b>,
+          Xin chào <b>{'${requestData.userName}'}</b>,
         </Text>
 
         <Text className='text-gray-600'>
           Chúng tôi gửi email này để xác nhận rằng mật khẩu tài khoản của bạn đã được thay đổi thành
-          công vào lúc <b>CHANGE_DATETIME</b>.
+          công vào lúc <b>{'${requestData.changeDateTime}'}</b>.
         </Text>
 
         <Container className='bg-blue-50 rounded-lg px-6'>
@@ -34,16 +34,22 @@ export default function ChangePasswordPage() {
             <li>
               <Text className='m-0 text-blue-700'>
                 Liên hệ đội ngũ bảo mật của chúng tôi qua email:
-                <Link className='ml-1 font-medium text-red-600' href='mailto:SUPPORT_EMAIL'>
-                  SUPPORT_EMAIL
+                <Link
+                  className='ml-1 font-medium text-red-600'
+                  href={'mailto:${requestData.supportEmail}'}
+                >
+                  {'${requestData.supportEmail}'}
                 </Link>
               </Text>
             </li>
             <li>
               <Text className='m-0 text-blue-700'>
                 Gọi đường dây hỗ trợ 24/7:
-                <Link className='ml-1 font-medium text-red-600' href='tel:SUPPORT_PHONE'>
-                  SUPPORT_PHONE
+                <Link
+                  className='ml-1 font-medium text-red-600'
+                  href={'tel:${requestData.supportPhone}'}
+                >
+                  {'${requestData.supportPhone}'}
                 </Link>
               </Text>
             </li>

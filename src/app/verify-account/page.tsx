@@ -29,7 +29,7 @@ export default function VerifyAccountPage() {
         <Text className='text-gray-800 text-xl font-semibold'>Xác Thực Tài Khoản</Text>
 
         <Text className='text-gray-600'>
-          Xin chào <b>USER_NAME</b>,
+          Xin chào <b>{'${requestData.userName}'}</b>,
         </Text>
 
         <Text className='text-gray-600'>
@@ -38,7 +38,7 @@ export default function VerifyAccountPage() {
         </Text>
 
         <Container className='text-center'>
-          <Link style={buttonStyle} href='VERIFICATION_LINK'>
+          <Link style={buttonStyle} href={'${requestData.verificationLink}'}>
             Xác Thực Tài Khoản
           </Link>
         </Container>
@@ -50,8 +50,8 @@ export default function VerifyAccountPage() {
           <ul className='px-4'>
             <li>
               <Text className='m-0 text-blue-700'>
-                Link xác thực này chỉ có hiệu lực trong vòng <b>DUE_DATE</b> kể từ khi bạn nhận được
-                email này.
+                Link xác thực này chỉ có hiệu lực trong vòng <b>{'${requestData.dueDate}'}</b> kể từ
+                khi bạn nhận được email này.
               </Text>
             </li>
             <li>
@@ -62,8 +62,11 @@ export default function VerifyAccountPage() {
             <li>
               <Text className='m-0 text-blue-700'>
                 Nếu cần hỗ trợ, vui lòng liên hệ:
-                <Link className='ml-1 font-medium text-red-600' href='mailto:SUPPORT_EMAIL'>
-                  SUPPORT_EMAIL
+                <Link
+                  className='ml-1 font-medium text-red-600'
+                  href={'mailto:${requestData.supportEmail}'}
+                >
+                  {'${requestData.supportEmail}'}
                 </Link>
               </Text>
             </li>
