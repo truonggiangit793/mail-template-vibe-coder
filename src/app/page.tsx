@@ -184,6 +184,22 @@ export default function Page() {
                 </Column>
               </Row>
             </Section>
+
+            <Section className='py-4'>
+              <Row>
+                <Column className='w-3/4'>
+                  <Link
+                    href='/incurred-approved'
+                    className='m-0 text-xl font-semibold text-blue-600 hover:text-blue-800 block'
+                  >
+                    → Incurred Approved Email Template
+                  </Link>
+                  <Text className='m-0 text-gray-600'>
+                    <Link href='/incurred-approved/export'>View HTML Source</Link>
+                  </Text>
+                </Column>
+              </Row>
+            </Section>
           </Section>
         </Container>
       </Section>
