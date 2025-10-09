@@ -2,9 +2,10 @@ import { render } from '@react-email/render';
 import { NextResponse } from 'next/server';
 
 import ReactMailWrapper from '@/app/_components/ReactMailWrapper';
-import MyTemplatePage from '@/app/my-template/page';
+
+import Page from '../page';
 
 export async function GET() {
-  const template = render(ReactMailWrapper({ children: MyTemplatePage() }));
+  const template = render(ReactMailWrapper({ children: Page() }));
   return new NextResponse(template);
 }

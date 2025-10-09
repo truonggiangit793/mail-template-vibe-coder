@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { Column, Container, Img, Link, Row, Section, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 
-export default function MyTemplatePage() {
+export default function Page() {
   const containerStyle: CSSProperties = { maxWidth: '50em' };
 
   return (

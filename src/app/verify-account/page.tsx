@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 import { Container, Hr, Img, Link, Section, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 
-export default function VerifyAccountPage() {
+export default function Page() {
   const containerStyle: CSSProperties = { maxWidth: '50em' };
   const buttonStyle: CSSProperties = {
     backgroundColor: '#0070f3',

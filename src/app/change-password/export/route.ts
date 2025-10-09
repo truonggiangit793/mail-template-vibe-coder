@@ -2,9 +2,10 @@ import { render } from '@react-email/render';
 import { NextResponse } from 'next/server';
 
 import ReactMailWrapper from '@/app/_components/ReactMailWrapper';
-import ChangePasswordPage from '@/app/change-password/page';
+
+import Page from '../page';
 
 export async function GET() {
-  const template = render(ReactMailWrapper({ children: ChangePasswordPage() }));
+  const template = render(ReactMailWrapper({ children: Page() }));
   return new NextResponse(template);
 }
