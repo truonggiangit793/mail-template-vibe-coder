@@ -1,6 +1,8 @@
 import { CSSProperties } from 'react';
-import { Container, Hr, Img, Link, Section, Text } from '@react-email/components';
+import { Container, Hr, Img, Link, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
+
+import TemplateFooter from '@/app/_components/TemplateFooter';
 
 export default function Page() {
   const containerStyle: CSSProperties = { maxWidth: '50em' };
@@ -21,7 +23,7 @@ export default function Page() {
     <Tailwind>
       {/* Header with Logo and Company Name */}
       <Container style={containerStyle} className='px-4 pt-10 pb-6'>
-        <Img height='60' src={'https://igap.vn/wp-content/uploads/2022/11/logo.png'} />
+        <Img height='60' src={'/logo-text.png'} alt='Logo' />
       </Container>
 
       {/* Main Content */}
@@ -94,24 +96,7 @@ export default function Page() {
       </Container>
 
       {/* Footer */}
-      <Container style={containerStyle} className='bg-gray-100 rounded-b-lg px-4 pb-6'>
-        <Section className='mt-6'>
-          <Img src={'https://igap.vn/wp-content/themes/igap/img/bg_01.png'} width={'100%'} />
-          <Text className='text-gray-500 text-xs'>
-            ©2017 Công Ty Cổ Phần Igap - iGap Join Stock Company.
-          </Text>
-          <Text className='text-gray-500 text-xs'>
-            158-158A Đào Duy Anh, Phường 9, Quận Phú Nhuận, TP.HCM.
-          </Text>
-          <Text className='text-gray-500 text-xs'>All rights reserved.</Text>
-        </Section>
-
-        <Hr className='my-8' />
-
-        <Text className='text-gray-400 text-xs text-center'>
-          Đây là email tự động, vui lòng không trả lời trực tiếp email này.
-        </Text>
-      </Container>
+      <TemplateFooter />
     </Tailwind>
   );
 }
