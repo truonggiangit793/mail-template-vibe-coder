@@ -4,21 +4,22 @@ import { Tailwind } from '@react-email/tailwind';
 
 import TemplateFooter from '@/app/_components/TemplateFooter';
 
-export default function Page() {
-  const containerStyle: CSSProperties = { maxWidth: '50em' };
-  const buttonStyle: CSSProperties = {
-    backgroundColor: '#0070f3',
-    borderRadius: '6px',
-    color: '#fff',
-    padding: '12px 24px',
-    textDecoration: 'none',
-    textAlign: 'center',
-    display: 'inline-block',
-    marginTop: '16px',
-    marginBottom: '16px',
-    fontWeight: 500,
-  };
+const containerStyle: CSSProperties = { maxWidth: '50em' };
 
+const buttonStyle: CSSProperties = {
+  backgroundColor: '#0070f3',
+  borderRadius: '6px',
+  color: '#fff',
+  padding: '12px 24px',
+  textDecoration: 'none',
+  textAlign: 'center',
+  display: 'inline-block',
+  marginTop: '16px',
+  marginBottom: '16px',
+  fontWeight: 500,
+};
+
+export default function Page() {
   return (
     <Tailwind>
       {/* Header with Logo and Company Name */}

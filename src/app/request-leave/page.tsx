@@ -17,50 +17,55 @@ export default function Page() {
       {/* Main Content */}
       <Container style={containerStyle} className='px-4'>
         <Text className='text-gray-600'>
-          Gửi <b>{'${userPayload.fullname}'}</b>,
+          Gửi <strong>{'${userPayload.fullname}'}</strong>,
         </Text>
 
         <Text className='text-gray-600'>
-          Sau quá trình kiểm tra và đánh giá, anh <strong>Vũ Văn Mạnh</strong> đã{' '}
-          <strong>{'${dataValues.status}'}</strong> yêu cầu chi phí phát sinh của bạn. Thông tin chi
-          tiết như sau:
+          Đây là email thông báo yêu cầu chi phí phát sinh của bạn đã được hệ thống tiếp nhận thành
+          công và đang trong quá trình xem xét, phê duyệt. Dưới đây là thông tin chi tiết về khoản
+          chi phí phát sinh mà bạn đã gửi:
         </Text>
 
         <Container className='bg-blue-50 rounded-lg px-6'>
           <ul className='px-4'>
             <li>
               <Text className='m-0 text-gray-500'>
-                Mã seller: <b>{'${dataValues.sellerCode}'}</b>
+                <strong>Người nhận:</strong> {'${receiver?.label}'}
               </Text>
             </li>
             <li>
               <Text className='m-0 text-gray-500'>
-                Mã chuyến: <b>{'${dataValues.tripCode}'}</b>
+                <strong>Mã seller:</strong> {'${dataValues.sellerCode}'}
               </Text>
             </li>
             <li>
               <Text className='m-0 text-gray-500'>
-                Cước đề xuất: <b>{'${dataValues.proposedRate}'}</b>
+                <strong>Mã chuyến:</strong> {'${dataValues.tripCode}'}
               </Text>
             </li>
             <li>
               <Text className='m-0 text-gray-500'>
-                Cước vendor: <b>{'${dataValues.vendorRate}'}</b>
+                <strong>Cước đề xuất:</strong> {'${dataValues.proposedRate}'}
               </Text>
             </li>
             <li>
               <Text className='m-0 text-gray-500'>
-                Phí phát sinh: <b>{'${dataValues.additionalFee}'}</b>
+                <strong>Cước vendor:</strong> {'${dataValues.vendorRate}'}
               </Text>
             </li>
             <li>
               <Text className='m-0 text-gray-500'>
-                Phần trăm phát sinh: <b>{'${dataValues.additionalPercent}'}</b>
+                <strong>Phí phát sinh:</strong> {'${dataValues.additionalFee}'}
               </Text>
             </li>
             <li>
               <Text className='m-0 text-gray-500'>
-                Lý do: <b>{'${dataValues.reason}'}</b>
+                <strong>Phần trăm phát sinh:</strong> {'${dataValues.additionalPercent}'}
+              </Text>
+            </li>
+            <li>
+              <Text className='m-0 text-gray-500'>
+                <strong>Lý do:</strong> {'${dataValues.reason}'}
               </Text>
             </li>
           </ul>

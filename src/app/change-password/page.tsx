@@ -4,9 +4,9 @@ import { Tailwind } from '@react-email/tailwind';
 
 import TemplateFooter from '@/app/_components/TemplateFooter';
 
-export default function Page() {
-  const containerStyle: CSSProperties = { maxWidth: '50em' };
+const containerStyle: CSSProperties = { maxWidth: '50em' };
 
+export default function Page() {
   return (
     <Tailwind>
       {/* Header with Logo and Company Name */}

@@ -2,9 +2,9 @@ import { CSSProperties } from 'react';
 import { Column, Container, Img, Link, Row, Section, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 
-export default function Page() {
-  const containerStyle: CSSProperties = { maxWidth: '50em' };
+const containerStyle: CSSProperties = { maxWidth: '50em' };
 
+export default function Page() {
   return (
     <Tailwind>
       <Section className='bg-[#f8fafa] rounded px-2 py-6'>

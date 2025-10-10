@@ -1,5 +1,33 @@
 import { Column, Container, Link, Row, Section, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
+import fs from 'fs';
+import path from 'path';
+
+interface TemplatesShowcase {
+  name: string;
+  url: string;
+  htmlUrl: string;
+}
+
+const templatesDir = path.join(process.cwd(), 'src/app');
+const templateFolders = fs
+  .readdirSync(templatesDir, { withFileTypes: true })
+  .filter(
+    (dirent) =>
+      dirent.isDirectory() &&
+      !dirent.name.startsWith('api') &&
+      !dirent.name.startsWith('page') &&
+      !dirent.name.startsWith('_') &&
+      !dirent.name.startsWith('(') &&
+      !dirent.name.startsWith('@')
+  )
+  .map((dirent) => dirent.name);
+
+const templates: TemplatesShowcase[] = templateFolders.map((folder) => ({
+  name: folder.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()),
+  url: `/${folder}`,
+  htmlUrl: `/${folder}/export`,
+}));
 
 export default function Page() {
   return (
@@ -18,55 +46,57 @@ export default function Page() {
           </Section>
 
           {/* Features */}
-          <Row className='py-8'>
-            <Column className='w-1/2'>
-              <Section>
-                <Text className='m-0 mb-2 text-xl font-bold text-blue-600'>
-                  🎨 React Components
-                </Text>
-                <Text className='m-0 text-gray-600'>
-                  Build email templates using familiar React components and patterns.
-                </Text>
-                <Link className='m-0' href='https://react.email/components'>
-                  Learn More
-                </Link>
-              </Section>
-            </Column>
-            <Column className='w-1/2'>
-              <Section>
-                <Text className='m-0 mb-2 text-xl font-bold text-purple-600'>
-                  🎯 Tailwind Styling
-                </Text>
-                <Text className='m-0 text-gray-600'>
-                  Style your templates with the power of Tailwind CSS utility classes.
-                </Text>
-                <Link className='m-0' href='https://tailwindcss.com'>
-                  Learn More
-                </Link>
-              </Section>
-            </Column>
-          </Row>
-          <Row>
-            <Column className='w-1/2'>
-              <Section>
-                <Text className='m-0 mb-2 text-xl font-bold text-green-600'>📤 Easy Export</Text>
-                <Text className='m-0 text-gray-600'>
-                  Export your templates to clean HTML with a single URL endpoint.
-                </Text>
-              </Section>
-            </Column>
-            <Column className='w-1/2'>
-              <Section>
-                <Text className='m-0 mb-2 text-xl font-bold text-orange-600'>📱 Responsive</Text>
-                <Text className='m-0 text-gray-600'>
-                  Create email templates that look great on any device.
-                </Text>
-              </Section>
-            </Column>
-          </Row>
+          <Section className='mb-12'>
+            <Row className='mb-6'>
+              <Column className='w-1/2'>
+                <Section>
+                  <Text className='m-0 mb-2 text-xl font-bold text-blue-600'>
+                    🎨 React Components
+                  </Text>
+                  <Text className='m-0 text-gray-600'>
+                    Build email templates using familiar React components and patterns.
+                  </Text>
+                  <Link className='m-0' href='https://react.email/components'>
+                    Learn More
+                  </Link>
+                </Section>
+              </Column>
+              <Column className='w-1/2'>
+                <Section>
+                  <Text className='m-0 mb-2 text-xl font-bold text-purple-600'>
+                    🎯 Tailwind Styling
+                  </Text>
+                  <Text className='m-0 text-gray-600'>
+                    Style your templates with the power of Tailwind CSS utility classes.
+                  </Text>
+                  <Link className='m-0' href='https://tailwindcss.com'>
+                    Learn More
+                  </Link>
+                </Section>
+              </Column>
+            </Row>
+            <Row>
+              <Column className='w-1/2'>
+                <Section>
+                  <Text className='m-0 mb-2 text-xl font-bold text-green-600'>📤 Easy Export</Text>
+                  <Text className='m-0 text-gray-600'>
+                    Export your templates to clean HTML with a single URL endpoint.
+                  </Text>
+                </Section>
+              </Column>
+              <Column className='w-1/2'>
+                <Section>
+                  <Text className='m-0 mb-2 text-xl font-bold text-orange-600'>📱 Responsive</Text>
+                  <Text className='m-0 text-gray-600'>
+                    Create email templates that look great on any device.
+                  </Text>
+                </Section>
+              </Column>
+            </Row>
+          </Section>
 
           {/* How to Use Section */}
-          <Section className='py-8'>
+          <Section className='mb-12'>
             <Text className='text-2xl font-bold text-gray-800 mb-6 border-b pb-2'>
               Quick Start Guide 🚀
             </Text>
@@ -129,77 +159,49 @@ export default function Page() {
           </Section>
 
           {/* Templates Showcase */}
-          <Section className='py-8'>
+          <Section className='mb-12'>
             <Text className='text-2xl font-bold text-gray-800 mb-6 border-b pb-2'>
               Available Templates ✨
             </Text>
 
-            <Section className='py-4'>
-              <Row>
-                <Column className='w-3/4'>
-                  <Link
-                    href='/my-template'
-                    className='m-0 text-xl font-semibold text-blue-600 hover:text-blue-800 block'
-                  >
-                    → Sample Email Template
-                  </Link>
-                  <Text className='m-0 text-gray-600'>
-                    A professional email template with logo, social links, and responsive design.{' '}
-                    <Link href='/my-template/export'>View HTML Source</Link>
-                  </Text>
-                </Column>
-              </Row>
-            </Section>
+            {templates.map((template, index) => (
+              <Section key={index} className='mb-6'>
+                <Row className='py-4 border-b'>
+                  <Column className='w-3/4'>
+                    <Text className='m-0 text-xl font-semibold text-gray-800'>{template.name}</Text>
+                    <Link href={template.htmlUrl}>View HTML Source</Link>
+                  </Column>
+                  <Column className='w-1/4 text-right'>
+                    <Link
+                      href={template.url}
+                      className='bg-blue-600 text-white px-4 py-2 rounded-md text-sm'
+                    >
+                      View Template
+                    </Link>
+                  </Column>
+                </Row>
+              </Section>
+            ))}
+          </Section>
 
-            <Section className='py-4'>
-              <Row>
-                <Column className='w-3/4'>
-                  <Link
-                    href='/change-password'
-                    className='m-0 text-xl font-semibold text-blue-600 hover:text-blue-800 block'
-                  >
-                    → Change Password Alert Email Template
-                  </Link>
-                  <Text className='m-0 text-gray-600'>
-                    A secure and user-friendly email template for password change notifications.{' '}
-                    <Link href='/change-password/export'>View HTML Source</Link>
-                  </Text>
-                </Column>
-              </Row>
-            </Section>
-
-            <Section className='py-4'>
-              <Row>
-                <Column className='w-3/4'>
-                  <Link
-                    href='/verify-account'
-                    className='m-0 text-xl font-semibold text-blue-600 hover:text-blue-800 block'
-                  >
-                    → Verify Account Email Template
-                  </Link>
-                  <Text className='m-0 text-gray-600'>
-                    A clean and effective email template to help users verify their accounts quickly
-                    and securely. <Link href='/verify-account/export'>View HTML Source</Link>
-                  </Text>
-                </Column>
-              </Row>
-            </Section>
-
-            <Section className='py-4'>
-              <Row>
-                <Column className='w-3/4'>
-                  <Link
-                    href='/incurred-approved'
-                    className='m-0 text-xl font-semibold text-blue-600 hover:text-blue-800 block'
-                  >
-                    → Incurred Approved Email Template
-                  </Link>
-                  <Text className='m-0 text-gray-600'>
-                    <Link href='/incurred-approved/export'>View HTML Source</Link>
-                  </Text>
-                </Column>
-              </Row>
-            </Section>
+          {/* Footer */}
+          <Section>
+            <Text className='text-lg font-bold text-gray-800 mb-4'>Get Started Now!</Text>
+            <Text className='m-0 text-gray-600 mb-4'>
+              Start building your own email templates with React and Tailwind CSS today. Check out
+              the code on{' '}
+              <Link
+                href='https://github.com/truonggiangit793/mail-template-vibe-coder'
+                className='text-blue-600 underline'
+              >
+                GitHub
+              </Link>
+            </Text>
+            <center>
+              <Text className='text-gray-500 text-xs m-0'>
+                ©{new Date().getFullYear()} All Rights Reserved
+              </Text>
+            </center>
           </Section>
         </Container>
       </Section>

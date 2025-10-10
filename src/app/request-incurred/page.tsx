@@ -1,10 +1,24 @@
 import { CSSProperties } from 'react';
-import { Container, Img, Text } from '@react-email/components';
+import { Container, Img, Link, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 
 import TemplateFooter from '@/app/_components/TemplateFooter';
 
 const containerStyle: CSSProperties = { maxWidth: '50em' };
+
+const buttonStyle: CSSProperties = {
+  backgroundColor: '#0070f3',
+  borderRadius: '6px',
+  color: '#fff',
+  padding: '10px 20px',
+  fontSize: '16px',
+  textDecoration: 'none',
+  textAlign: 'center',
+  display: 'inline-block',
+  marginTop: '16px',
+  marginBottom: '16px',
+  fontWeight: 500,
+};
 
 export default function Page() {
   return (
@@ -17,17 +31,22 @@ export default function Page() {
       {/* Main Content */}
       <Container style={containerStyle} className='px-4'>
         <Text className='text-gray-600'>
-          Gửi <b>{'${userPayload.fullname}'}</b>,
+          Gửi anh <strong>Vũ Văn Mạnh</strong>,
         </Text>
 
         <Text className='text-gray-600'>
-          Sau quá trình kiểm tra và đánh giá, anh <strong>Vũ Văn Mạnh</strong> đã{' '}
-          <strong>{'${dataValues.status}'}</strong> yêu cầu chi phí phát sinh của bạn. Thông tin chi
-          tiết như sau:
+          Anh vừa nhận được một yêu cầu chi phí phát sinh mới, hiện đang chờ phê duyệt. Dưới đây là
+          thông tin chi tiết liên quan đến yêu cầu này:
         </Text>
 
         <Container className='bg-blue-50 rounded-lg px-6'>
           <ul className='px-4'>
+            <li>
+              <Text className='m-0 text-gray-500'>
+                <strong>Người yêu cầu:</strong> {'${userPayload.fullname}'} (
+                {'${userPayload.department}'})
+              </Text>
+            </li>
             <li>
               <Text className='m-0 text-gray-500'>
                 Mã seller: <b>{'${dataValues.sellerCode}'}</b>
@@ -64,6 +83,23 @@ export default function Page() {
               </Text>
             </li>
           </ul>
+        </Container>
+
+        <Text className='text-gray-600'>
+          Để phê duyệt hoặc từ chối yêu cầu này, anh vui lòng lựa chọn liên kết phù hợp bên dưới.
+          Lưu ý: Sau khi thực hiện, hệ thống sẽ tự động xử lý và thao tác này không thể hoàn tác.
+        </Text>
+
+        <Container className='text-center'>
+          <Link
+            style={{ ...buttonStyle, backgroundColor: '#f44336', marginRight: '4px' }}
+            href={'${rejectUrl}'}
+          >
+            Từ chối
+          </Link>
+          <Link style={{ ...buttonStyle, marginLeft: '4px' }} href={'${approveUrl}'}>
+            Đồng ý
+          </Link>
         </Container>
 
         <Text className='text-gray-600'>
