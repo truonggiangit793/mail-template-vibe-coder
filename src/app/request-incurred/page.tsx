@@ -1,24 +1,11 @@
 import { CSSProperties } from 'react';
-import { Container, Img, Link, Text } from '@react-email/components';
+import { Container, Img, Section, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 
+import Button from '@/app/_components/Button';
 import TemplateFooter from '@/app/_components/TemplateFooter';
 
 const containerStyle: CSSProperties = { maxWidth: '50em' };
-
-const buttonStyle: CSSProperties = {
-  backgroundColor: '#0070f3',
-  borderRadius: '6px',
-  color: '#fff',
-  padding: '10px 20px',
-  fontSize: '16px',
-  textDecoration: 'none',
-  textAlign: 'center',
-  display: 'inline-block',
-  marginTop: '16px',
-  marginBottom: '16px',
-  fontWeight: 500,
-};
 
 export default function Page() {
   return (
@@ -90,17 +77,14 @@ export default function Page() {
           Lưu ý: Sau khi thực hiện, hệ thống sẽ tự động xử lý và thao tác này không thể hoàn tác.
         </Text>
 
-        <Container className='text-center'>
-          <Link
-            style={{ ...buttonStyle, backgroundColor: '#f44336', marginRight: '4px' }}
-            href={'${rejectUrl}'}
-          >
+        <Section className='flex justify-center'>
+          <Button href={'${rejectUrl}'} variant='destructive' className='mr-2'>
             Từ chối
-          </Link>
-          <Link style={{ ...buttonStyle, marginLeft: '4px' }} href={'${approveUrl}'}>
+          </Button>
+          <Button href={'${approveUrl}'} variant='primary' className='ml-2'>
             Đồng ý
-          </Link>
-        </Container>
+          </Button>
+        </Section>
 
         <Text className='text-gray-600'>
           Đây là email được gửi tự động từ hệ thống. Vui lòng không phản hồi trực tiếp email này.
