@@ -7,7 +7,7 @@ export default function TemplateFooter() {
   return (
     <Container style={containerStyle} className='bg-gray-100 rounded-lg px-4 pb-6'>
       <Section className='mt-6 text-center'>
-        <center className='mt-8 mb-4'>
+        <center className='mt-4 mb-4'>
           <Img height='30' src={'/logo.png'} alt='iGap Logo' />
         </center>
         <Text className='text-gray-500 text-xs m-0'>©{new Date().getFullYear()} iGap JSC</Text>

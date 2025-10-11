@@ -16,8 +16,10 @@ export default function Page() {
 
       {/* Main Content */}
       <Container style={containerStyle} className='px-4'>
+        <Text className='text-gray-600 text-lg font-semibold'>Phản hồi yêu cầu nghỉ phép</Text>
+
         <Text className='text-gray-600'>
-          Gửi <strong>{'${userPayload.fullname}'}</strong>,
+          Gửi <b>{'${userPayload.fullname}'}</b>,
         </Text>
 
         <Text className='text-gray-600'>
@@ -27,41 +29,28 @@ export default function Page() {
 
         {[1, 2, 3].map((item, key) => {
           return (
-            <Container className='bg-blue-50 rounded-lg px-6' key={key}>
-              <ul className='px-4'>
-                <li>
-                  <Row>
-                    <Column>
-                      <Text className='m-0 text-gray-500'>
-                        <strong>Từ:</strong> {'${item.startDate}'}
-                      </Text>
-                    </Column>
-                    <Column>
-                      <Text className='m-0 text-gray-500'>
-                        <strong>Đến:</strong> {'${item.endDate}'}
-                      </Text>
-                    </Column>
-                  </Row>
-                </li>
-
-                <li>
+            <Container className='bg-blue-50 rounded-lg p-6 mt-4' key={key}>
+              <Row>
+                <Column>
                   <Text className='m-0 text-gray-500'>
-                    <strong>Tổng số ngày:</strong> {'${totalDays} ngày'}
+                    <b>Từ:</b> {'${item.startDate}'}
                   </Text>
-                </li>
-
-                <li>
+                </Column>
+                <Column>
                   <Text className='m-0 text-gray-500'>
-                    <strong>Hình thức:</strong> {'${requestType.label}'}
+                    <b>Đến:</b> {'${item.endDate}'}
                   </Text>
-                </li>
-
-                <li>
-                  <Text className='m-0 text-gray-500'>
-                    <strong>Lý do:</strong> {'${item.reason}'}
-                  </Text>
-                </li>
-              </ul>
+                </Column>
+              </Row>
+              <Text className='m-0 text-gray-500'>
+                <b>Tổng số ngày:</b> {'${totalDays} ngày'}
+              </Text>
+              <Text className='m-0 text-gray-500'>
+                <b>Hình thức:</b> {'${requestType.label}'}
+              </Text>
+              <Text className='m-0 text-gray-500'>
+                <b>Lý do:</b> {'${item.reason}'}
+              </Text>
             </Container>
           );
         })}

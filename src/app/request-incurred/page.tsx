@@ -17,8 +17,10 @@ export default function Page() {
 
       {/* Main Content */}
       <Container style={containerStyle} className='px-4'>
+        <Text className='text-gray-600 text-lg font-semibold'>Duyệt yêu cầu chi phí phát sinh</Text>
+
         <Text className='text-gray-600'>
-          Gửi anh <strong>Vũ Văn Mạnh</strong>,
+          Gửi anh <b>Vũ Văn Mạnh</b>,
         </Text>
 
         <Text className='text-gray-600'>
@@ -26,50 +28,31 @@ export default function Page() {
           thông tin chi tiết liên quan đến yêu cầu này:
         </Text>
 
-        <Container className='bg-blue-50 rounded-lg px-6'>
-          <ul className='px-4'>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                <strong>Người yêu cầu:</strong> {'${userPayload.fullname}'} (
-                {'${userPayload.department}'})
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                Mã seller: <b>{'${dataValues.sellerCode}'}</b>
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                Mã chuyến: <b>{'${dataValues.tripCode}'}</b>
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                Cước đề xuất: <b>{'${dataValues.proposedRate}'}</b>
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                Cước vendor: <b>{'${dataValues.vendorRate}'}</b>
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                Phí phát sinh: <b>{'${dataValues.additionalFee}'}</b>
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                Phần trăm phát sinh: <b>{'${dataValues.additionalPercent}'}</b>
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                Lý do: <b>{'${dataValues.reason}'}</b>
-              </Text>
-            </li>
-          </ul>
+        <Container className='bg-blue-50 rounded-lg p-6'>
+          <Text className='m-0 text-gray-500'>
+            <b>Người yêu cầu:</b> {'${nameDisplay}'}
+          </Text>
+          <Text className='m-0 text-gray-500'>
+            <b>Mã seller:</b> {'${dataValues.sellerCode}'}
+          </Text>
+          <Text className='m-0 text-gray-500'>
+            <b>Mã chuyến:</b> {'${dataValues.tripCode}'}
+          </Text>
+          <Text className='m-0 text-gray-500'>
+            <b>Cước đề xuất:</b> {'${dataValues.proposedRate}'}
+          </Text>
+          <Text className='m-0 text-gray-500'>
+            <b>Cước vendor:</b> {'${dataValues.vendorRate}'}
+          </Text>
+          <Text className='m-0 text-gray-500'>
+            <b>Phí phát sinh:</b> {'${dataValues.additionalFee}'}
+          </Text>
+          <Text className='m-0 text-gray-500'>
+            <b>Phần trăm phát sinh:</b> {'${dataValues.additionalPercent}'}
+          </Text>
+          <Text className='m-0 text-gray-500'>
+            <b>Lý do:</b> {'${dataValues.reason}'}
+          </Text>
         </Container>
 
         <Text className='text-gray-600'>

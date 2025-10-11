@@ -1,7 +1,8 @@
 import { CSSProperties } from 'react';
-import { Container, Img, Text } from '@react-email/components';
+import { Column, Container, Img, Row, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 
+import Button from '@/app/_components/Button';
 import TemplateFooter from '@/app/_components/TemplateFooter';
 
 const containerStyle: CSSProperties = { maxWidth: '50em' };
@@ -16,59 +17,57 @@ export default function Page() {
 
       {/* Main Content */}
       <Container style={containerStyle} className='px-4'>
+        <Text className='text-gray-600 text-lg font-semibold'>Duyệt yêu cầu nghỉ phép</Text>
+
         <Text className='text-gray-600'>
-          Gửi <strong>{'${userPayload.fullname}'}</strong>,
+          Gửi <b>{'${userPayload.approverEmail}'}</b>,
         </Text>
 
         <Text className='text-gray-600'>
-          Đây là email thông báo yêu cầu chi phí phát sinh của bạn đã được hệ thống tiếp nhận thành
-          công và đang trong quá trình xem xét, phê duyệt. Dưới đây là thông tin chi tiết về khoản
-          chi phí phát sinh mà bạn đã gửi:
+          Đây là email thông báo về một yêu cầu phê duyệt nghỉ phép mới. Vui lòng xem xét các thông
+          tin chi tiết dưới đây để thực hiện việc phê duyệt theo quy trình của công ty.
         </Text>
 
-        <Container className='bg-blue-50 rounded-lg px-6'>
-          <ul className='px-4'>
-            <li>
+        <Text className='m-0 text-gray-500'>
+          <b>Tên nhân viên:</b> {'${userPayload.fullname}'}
+        </Text>
+
+        <Text className='m-0 text-gray-500'>
+          <b>Bộ phận:</b> {'${userPayload.department}'}
+        </Text>
+
+        {[1, 2, 3].map((item, key) => {
+          return (
+            <Container className='bg-blue-50 rounded-lg p-6 mt-4' key={key}>
+              <Row>
+                <Column>
+                  <Text className='m-0 text-gray-500'>
+                    <b>Từ:</b> {'${item.startDate}'}
+                  </Text>
+                </Column>
+                <Column>
+                  <Text className='m-0 text-gray-500'>
+                    <b>Đến:</b> {'${item.endDate}'}
+                  </Text>
+                </Column>
+              </Row>
               <Text className='m-0 text-gray-500'>
-                <strong>Người nhận:</strong> {'${receiver?.label}'}
+                <b>Tổng số ngày:</b> {'${totalDays} ngày'}
               </Text>
-            </li>
-            <li>
               <Text className='m-0 text-gray-500'>
-                <strong>Mã seller:</strong> {'${dataValues.sellerCode}'}
+                <b>Hình thức:</b> {'${requestType.label}'}
               </Text>
-            </li>
-            <li>
               <Text className='m-0 text-gray-500'>
-                <strong>Mã chuyến:</strong> {'${dataValues.tripCode}'}
+                <b>Lý do:</b> {'${item.reason}'}
               </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                <strong>Cước đề xuất:</strong> {'${dataValues.proposedRate}'}
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                <strong>Cước vendor:</strong> {'${dataValues.vendorRate}'}
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                <strong>Phí phát sinh:</strong> {'${dataValues.additionalFee}'}
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                <strong>Phần trăm phát sinh:</strong> {'${dataValues.additionalPercent}'}
-              </Text>
-            </li>
-            <li>
-              <Text className='m-0 text-gray-500'>
-                <strong>Lý do:</strong> {'${dataValues.reason}'}
-              </Text>
-            </li>
-          </ul>
+            </Container>
+          );
+        })}
+
+        <Container className='text-center'>
+          <Button href={'${approveUrl}'} variant='primary' className='ml-2'>
+            Duyệt yêu cầu này
+          </Button>
         </Container>
 
         <Text className='text-gray-600'>
