@@ -39,14 +39,14 @@ export default function Page() {
             <b>Lưu ý quan trọng:</b>
           </Text>
           <Text className='m-0 text-blue-700'>
-            Link xác thực này chỉ có hiệu lực trong vòng <b>{'${requestData.dueDate}'}</b> kể từ khi
-            bạn nhận được email này.
+            - Link xác thực này chỉ có hiệu lực trong vòng <b>{'${requestData.dueDate}'}</b> kể từ
+            khi bạn nhận được email này.
           </Text>
           <Text className='m-0 text-blue-700'>
-            Nếu bạn không thực hiện yêu cầu này, vui lòng bỏ qua email này.
+            - Nếu bạn không thực hiện yêu cầu này, vui lòng bỏ qua email này.
           </Text>
           <Text className='m-0 text-blue-700'>
-            Nếu cần hỗ trợ, vui lòng liên hệ:
+            - Nếu cần hỗ trợ, vui lòng liên hệ:
             <Link
               className='ml-1 font-medium text-red-600'
               href={'mailto:${requestData.supportEmail}'}

@@ -33,7 +33,7 @@ export default function Page() {
             vui lòng thực hiện ngay các bước sau:
           </Text>
           <Text className='m-0 text-blue-700'>
-            Liên hệ đội ngũ bảo mật của chúng tôi qua email:
+            - Liên hệ đội ngũ bảo mật của chúng tôi qua email:
             <Link
               className='ml-1 font-medium text-red-600'
               href={'mailto:${requestData.supportEmail}'}
@@ -42,7 +42,7 @@ export default function Page() {
             </Link>
           </Text>
           <Text className='m-0 text-blue-700'>
-            Gọi đường dây hỗ trợ 24/7:
+            - Gọi đường dây hỗ trợ 24/7:
             <Link
               className='ml-1 font-medium text-red-600'
               href={'tel:${requestData.supportPhone}'}

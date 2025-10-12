@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { Column, Container, Img, Row, Text } from '@react-email/components';
+import { Container, Img, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 
 import TemplateFooter from '@/app/_components/TemplateFooter';
@@ -30,26 +30,20 @@ export default function Page() {
         {[1, 2, 3].map((item, key) => {
           return (
             <Container className='bg-blue-50 rounded-lg p-6 mt-4' key={key}>
-              <Row>
-                <Column>
-                  <Text className='m-0 text-gray-500'>
-                    <b>Từ:</b> {'${item.startDate}'}
-                  </Text>
-                </Column>
-                <Column>
-                  <Text className='m-0 text-gray-500'>
-                    <b>Đến:</b> {'${item.endDate}'}
-                  </Text>
-                </Column>
-              </Row>
               <Text className='m-0 text-gray-500'>
-                <b>Tổng số ngày:</b> {'${totalDays} ngày'}
+                <b>- Từ:</b> {'${item.startDate}'}
               </Text>
               <Text className='m-0 text-gray-500'>
-                <b>Hình thức:</b> {'${requestType.label}'}
+                <b>- Đến:</b> {'${item.endDate}'}
               </Text>
               <Text className='m-0 text-gray-500'>
-                <b>Lý do:</b> {'${item.reason}'}
+                <b>- Tổng số ngày:</b> {'${totalDays} ngày'}
+              </Text>
+              <Text className='m-0 text-gray-500'>
+                <b>- Hình thức:</b> {'${requestType.label}'}
+              </Text>
+              <Text className='m-0 text-gray-500'>
+                <b>- Lý do:</b> {'${item.reason}'}
               </Text>
             </Container>
           );

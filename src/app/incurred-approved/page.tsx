@@ -32,25 +32,25 @@ export default function Page() {
 
         <Container className='bg-blue-50 rounded-lg p-6'>
           <Text className='m-0 text-gray-500'>
-            <b>Mã seller:</b> {'${dataValues.sellerCode}'}
+            <b>- Mã seller:</b> {'${dataValues.sellerCode}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Mã chuyến:</b> {'${dataValues.tripCode}'}
+            <b>- Mã chuyến:</b> {'${dataValues.tripCode}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Cước đề xuất:</b> {'${dataValues.proposedRate}'}
+            <b>- Cước đề xuất:</b> {'${dataValues.proposedRate}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Cước vendor:</b> {'${dataValues.vendorRate}'}
+            <b>- Cước vendor:</b> {'${dataValues.vendorRate}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Phí phát sinh:</b> {'${dataValues.additionalFee}'}
+            <b>- Phí phát sinh:</b> {'${dataValues.additionalFee}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Phần trăm phát sinh:</b> {'${dataValues.additionalPercent}'}
+            <b>- Phần trăm phát sinh:</b> {'${dataValues.additionalPercent}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Lý do:</b> {'${dataValues.reason}'}
+            <b>- Lý do:</b> {'${dataValues.reason}'}
           </Text>
         </Container>
 

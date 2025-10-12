@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { Column, Container, Img, Row, Text } from '@react-email/components';
+import { Container, Img, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 
 import Button from '@/app/_components/Button';
@@ -39,36 +39,30 @@ export default function Page() {
         {[1, 2, 3].map((item, key) => {
           return (
             <Container className='bg-blue-50 rounded-lg p-6 mt-4' key={key}>
-              <Row>
-                <Column>
-                  <Text className='m-0 text-gray-500'>
-                    <b>Từ:</b> {'${item.startDate}'}
-                  </Text>
-                </Column>
-                <Column>
-                  <Text className='m-0 text-gray-500'>
-                    <b>Đến:</b> {'${item.endDate}'}
-                  </Text>
-                </Column>
-              </Row>
               <Text className='m-0 text-gray-500'>
-                <b>Tổng số ngày:</b> {'${totalDays} ngày'}
+                <b>- Từ:</b> {'${item.startDate}'}
               </Text>
               <Text className='m-0 text-gray-500'>
-                <b>Hình thức:</b> {'${requestType.label}'}
+                <b>- Đến:</b> {'${item.endDate}'}
               </Text>
               <Text className='m-0 text-gray-500'>
-                <b>Lý do:</b> {'${item.reason}'}
+                <b>- Tổng số ngày:</b> {'${totalDays} ngày'}
+              </Text>
+              <Text className='m-0 text-gray-500'>
+                <b>- Hình thức:</b> {'${requestType.label}'}
+              </Text>
+              <Text className='m-0 text-gray-500'>
+                <b>- Lý do:</b> {'${item.reason}'}
               </Text>
             </Container>
           );
         })}
 
-        <Container className='text-center'>
+        <center>
           <Button href={'${approveUrl}'} variant='primary' className='ml-2'>
             Duyệt yêu cầu này
           </Button>
-        </Container>
+        </center>
 
         <Text className='text-gray-600'>
           Đây là email được gửi tự động từ hệ thống. Vui lòng không phản hồi trực tiếp email này.

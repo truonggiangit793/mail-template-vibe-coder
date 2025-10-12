@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { Column, Container, Img, Row, Text } from '@react-email/components';
+import { Container, Img, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 
 import TemplateFooter from '@/app/_components/TemplateFooter';
@@ -29,32 +29,26 @@ export default function Page() {
         </Text>
 
         <Container className='bg-blue-50 rounded-lg p-6'>
-          <Row>
-            <Column>
-              <Text className='m-0 text-gray-500'>
-                <b>Từ:</b> {'${request.startDate}'}
-              </Text>
-            </Column>
-            <Column>
-              <Text className='m-0 text-gray-500'>
-                <b>Đến:</b> {'${request.endDate}'}
-              </Text>
-            </Column>
-          </Row>
           <Text className='m-0 text-gray-500'>
-            <b>Tổng số ngày:</b> {'${totalDays} ngày'}
+            <b>- Từ:</b> {'${request.startDate}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Hình thức:</b> {'${requestType.label}'}
+            <b>- Đến:</b> {'${request.endDate}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Lý do:</b> {'${request.reason}'}
+            <b>- Tổng số ngày:</b> {'${totalDays} ngày'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Kết quả duyệt:</b> <span style={{ color: 'green' }}>{'${request.status}'}</span>
+            <b>- Hình thức:</b> {'${requestType.label}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Thời gian duyệt:</b> {'${request.approvedDate}'}
+            <b>- Lý do:</b> {'${request.reason}'}
+          </Text>
+          <Text className='m-0 text-gray-500'>
+            <b>- Kết quả duyệt:</b> <span style={{ color: 'green' }}>{'${request.status}'}</span>
+          </Text>
+          <Text className='m-0 text-gray-500'>
+            <b>- Thời gian duyệt:</b> {'${request.approvedDate}'}
           </Text>
         </Container>
 

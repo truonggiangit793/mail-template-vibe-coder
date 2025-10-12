@@ -32,28 +32,28 @@ export default function Page() {
 
         <Container className='bg-blue-50 rounded-lg p-6'>
           <Text className='m-0 text-gray-500'>
-            <b>Người nhận:</b> {'${renderString(receiver?.label)}'}
+            <b>- Người nhận:</b> {'${renderString(receiver?.label)}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Mã seller:</b> {'${renderString(dataValues.sellerCode)}'}
+            <b>- Mã seller:</b> {'${renderString(dataValues.sellerCode)}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Mã chuyến:</b> {'${renderString(dataValues.tripCode)}'}
+            <b>- Mã chuyến:</b> {'${renderString(dataValues.tripCode)}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Cước đề xuất:</b> {'${toVND(dataValues.proposedRate)}'}
+            <b>- Cước đề xuất:</b> {'${toVND(dataValues.proposedRate)}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Cước vendor:</b> {'${toVND(dataValues.vendorRate)}'}
+            <b>- Cước vendor:</b> {'${toVND(dataValues.vendorRate)}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Phí phát sinh:</b> {'${toVND(dataValues.additionalFee)}'}
+            <b>- Phí phát sinh:</b> {'${toVND(dataValues.additionalFee)}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Phần trăm phát sinh:</b> {'${renderPercentage(dataValues.additionalPercent)}'}
+            <b>- Phần trăm phát sinh:</b> {'${renderPercentage(dataValues.additionalPercent)}'}
           </Text>
           <Text className='m-0 text-gray-500'>
-            <b>Lý do:</b> {'${renderString(dataValues.reason)}'}
+            <b>- Lý do:</b> {'${renderString(dataValues.reason)}'}
           </Text>
         </Container>
 
