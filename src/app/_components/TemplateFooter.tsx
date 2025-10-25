@@ -7,7 +7,7 @@ export default function TemplateFooter() {
   return (
     <Container style={containerStyle} className='bg-gray-100 rounded-lg p-6'>
       <center>
-        <Img height='30' src={'/logo.png'} alt='iGap Logo' />
+        <Img height='30' src={'https://dev-sme.igap.vn/logo.png'} alt='iGap Logo' />
       </center>
 
       <center className='my-4'>
