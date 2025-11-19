@@ -27,13 +27,13 @@ export default function Page() {
         <Text className='text-gray-600'>
           Bạn đã được mời tham gia hệ thống GO iGAP bởi quản trị viên của{' '}
           <b>{'${data.customerName}'}</b>. Để bắt đầu sử dụng tài khoản, vui lòng bấm vào nút
-          &quot;Xác Nhận Tài Khoản&quot; dưới đây.
+          &quot;Kích Hoạt Tài Khoản&quot; dưới đây.
         </Text>
 
         <Section className='flex justify-center my-6'>
           <center>
             <Button href={'${data.confirmationLink}'} variant='primary'>
-              Xác Nhận Tài Khoản
+              Kích Hoạt Tài Khoản
             </Button>
           </center>
         </Section>
@@ -49,15 +49,6 @@ export default function Page() {
           <Text className='m-0 text-gray-700'>
             <b>Mật khẩu tạm thời:</b> {'${data.password}'}
           </Text>
-          <Text className='m-0 text-gray-700'>
-            <b>Họ & tên:</b> {'${data.fullName}'}
-          </Text>
-          <Text className='m-0 text-gray-700'>
-            <b>Chức vụ:</b> {'${data.jobPosition}'}
-          </Text>
-          <Text className='m-0 text-gray-700'>
-            <b>Vai trò:</b> {'${data.role}'}
-          </Text>
         </Container>
 
         <Text className='text-gray-600 mt-4'>
@@ -68,11 +59,19 @@ export default function Page() {
         <Container className='bg-blue-50 rounded-lg p-4 mt-4'>
           <Text className='text-blue-800 m-0 font-medium'>Lưu ý quan trọng:</Text>
           <Text className='m-0 text-blue-700'>
-            - Bạn cần bấm vào nút &quot;Xác Nhận Tài Khoản&quot; trước khi có thể sử dụng mật khẩu
-            để đăng nhập.
+            - Liên kết xác thực này chỉ có hiệu lực trong vòng {'${requestData.dueDays}'} giờ kể từ
+            khi bạn nhận được email này.
           </Text>
           <Text className='m-0 text-blue-700'>
-            - Mật khẩu tạm thời chỉ nên được sử dụng một lần duy nhất.
+            - Mật khẩu tạm thời chỉ nên được sử dụng một lần.
+          </Text>
+          <Text className='m-0 text-blue-700'>- Đổi mật khẩu định kỳ để tăng cường bảo mật.</Text>
+          <Text className='m-0 text-blue-700'>
+            - Sử dụng mật khẩu mạnh và duy nhất cho tài khoản của bạn.
+          </Text>
+          <Text className='m-0 text-blue-700'>- Không chia sẻ mật khẩu với bất kỳ ai.</Text>
+          <Text className='m-0 text-blue-700'>
+            - Đảm bảo đăng xuất khỏi tài khoản trên các thiết bị công cộng hoặc lạ.
           </Text>
           <Text className='m-0 text-blue-700'>
             - Nếu bạn không yêu cầu tài khoản này, vui lòng bỏ qua email.

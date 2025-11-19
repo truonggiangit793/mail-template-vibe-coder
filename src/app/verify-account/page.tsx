@@ -39,11 +39,22 @@ export default function Page() {
             <b>Lưu ý quan trọng:</b>
           </Text>
           <Text className='m-0 text-blue-700'>
-            - Liên kết xác thực này chỉ có hiệu lực trong vòng <b>{'${requestData.dueDays}'} giờ</b>{' '}
-            kể từ khi bạn nhận được email này.
+            - Liên kết xác thực này chỉ có hiệu lực trong vòng {'${requestData.dueDays}'} giờ kể từ
+            khi bạn nhận được email này.
           </Text>
           <Text className='m-0 text-blue-700'>
-            - Vui lòng bỏ qua email nếu bạn không thực hiện yêu cầu này.
+            - Mật khẩu tạm thời chỉ nên được sử dụng một lần.
+          </Text>
+          <Text className='m-0 text-blue-700'>- Đổi mật khẩu định kỳ để tăng cường bảo mật.</Text>
+          <Text className='m-0 text-blue-700'>
+            - Sử dụng mật khẩu mạnh và duy nhất cho tài khoản của bạn.
+          </Text>
+          <Text className='m-0 text-blue-700'>- Không chia sẻ mật khẩu với bất kỳ ai.</Text>
+          <Text className='m-0 text-blue-700'>
+            - Đảm bảo đăng xuất khỏi tài khoản trên các thiết bị công cộng hoặc lạ.
+          </Text>
+          <Text className='m-0 text-blue-700'>
+            - Nếu bạn không yêu cầu tài khoản này, vui lòng bỏ qua email.
           </Text>
         </Container>
 

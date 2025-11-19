@@ -37,15 +37,6 @@ export default function Page() {
           <Text className='m-0 text-gray-700'>
             <b>Mật khẩu tạm thời:</b> {'${requestData.password}'}
           </Text>
-          <Text className='m-0 text-gray-700'>
-            <b>Họ & tên:</b> {'${requestData.fullName}'}
-          </Text>
-          <Text className='m-0 text-gray-700'>
-            <b>Chức vụ:</b> {'${requestData.jobPosition}'}
-          </Text>
-          <Text className='m-0 text-gray-700'>
-            <b>Vai trò:</b> {'${requestData.role}'}
-          </Text>
         </Container>
 
         <Section className='flex justify-center'>
@@ -67,8 +58,24 @@ export default function Page() {
           <Text className='m-0 text-blue-700'>
             - Mật khẩu tạm thời chỉ nên được sử dụng một lần.
           </Text>
+
           <Text className='m-0 text-blue-700'>
-            - Nếu bạn không nhận được email này hoặc có thắc mắc, vui lòng liên hệ admin.
+            - Liên kết xác thực này chỉ có hiệu lực trong vòng {'${requestData.dueDays}'} giờ kể từ
+            khi bạn nhận được email này.
+          </Text>
+          <Text className='m-0 text-blue-700'>
+            - Mật khẩu tạm thời chỉ nên được sử dụng một lần.
+          </Text>
+          <Text className='m-0 text-blue-700'>- Đổi mật khẩu định kỳ để tăng cường bảo mật.</Text>
+          <Text className='m-0 text-blue-700'>
+            - Sử dụng mật khẩu mạnh và duy nhất cho tài khoản của bạn.
+          </Text>
+          <Text className='m-0 text-blue-700'>- Không chia sẻ mật khẩu với bất kỳ ai.</Text>
+          <Text className='m-0 text-blue-700'>
+            - Đảm bảo đăng xuất khỏi tài khoản trên các thiết bị công cộng hoặc lạ.
+          </Text>
+          <Text className='m-0 text-blue-700'>
+            - Nếu bạn không yêu cầu tài khoản này, vui lòng bỏ qua email.
           </Text>
         </Container>
 

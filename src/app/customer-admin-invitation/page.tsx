@@ -75,7 +75,7 @@ export default function Page() {
           </Text>
           <Text className='m-0 text-blue-700'>- Không chia sẻ mật khẩu với bất kỳ ai.</Text>
           <Text className='m-0 text-blue-700'>
-            - Đảm bảo đăng xuất khỏi tài khoản trên các thiết bị công cộng hoặc lạ.
+            - Đảm bảo đăng xuất khỏi tài khoản trên các thiết bị lạ.
           </Text>
           <Text className='m-0 text-blue-700'>
             - Nếu bạn không yêu cầu tài khoản này, vui lòng bỏ qua email.
