@@ -58,14 +58,6 @@ export default function Page() {
           <Text className='m-0 text-blue-700'>
             - Mật khẩu tạm thời chỉ nên được sử dụng một lần.
           </Text>
-
-          <Text className='m-0 text-blue-700'>
-            - Liên kết xác thực này chỉ có hiệu lực trong vòng {'${requestData.dueDays}'} giờ kể từ
-            khi bạn nhận được email này.
-          </Text>
-          <Text className='m-0 text-blue-700'>
-            - Mật khẩu tạm thời chỉ nên được sử dụng một lần.
-          </Text>
           <Text className='m-0 text-blue-700'>- Đổi mật khẩu định kỳ để tăng cường bảo mật.</Text>
           <Text className='m-0 text-blue-700'>
             - Sử dụng mật khẩu mạnh và duy nhất cho tài khoản của bạn.
