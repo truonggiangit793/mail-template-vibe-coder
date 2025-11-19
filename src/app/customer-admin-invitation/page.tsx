@@ -63,8 +63,8 @@ export default function Page() {
         <Container className='bg-blue-50 rounded-lg p-4 mt-4'>
           <Text className='text-blue-800 m-0 font-medium'>Lưu ý quan trọng:</Text>
           <Text className='m-0 text-blue-700'>
-            - Liên kết xác thực này chỉ có hiệu lực trong vòng {'${requestData.dueDays}'} giờ kể từ
-            khi bạn nhận được email này.
+            - Liên kết xác thực này chỉ có hiệu lực trong vòng 48 giờ kể từ khi bạn nhận được email
+            này.
           </Text>
           <Text className='m-0 text-blue-700'>
             - Mật khẩu tạm thời chỉ nên được sử dụng một lần.

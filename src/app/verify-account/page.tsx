@@ -39,8 +39,8 @@ export default function Page() {
             <b>Lưu ý quan trọng:</b>
           </Text>
           <Text className='m-0 text-blue-700'>
-            - Liên kết xác thực này chỉ có hiệu lực trong vòng {'${requestData.dueDays}'} giờ kể từ
-            khi bạn nhận được email này.
+            - Liên kết xác thực này chỉ có hiệu lực trong vòng 48 giờ kể từ khi bạn nhận được email
+            này.
           </Text>
           <Text className='m-0 text-blue-700'>
             - Mật khẩu tạm thời chỉ nên được sử dụng một lần.
