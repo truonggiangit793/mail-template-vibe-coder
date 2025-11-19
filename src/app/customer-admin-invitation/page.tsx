@@ -17,19 +17,32 @@ export default function Page() {
       {/* Main Content */}
       <Container style={containerStyle} className='px-4'>
         <Text className='text-gray-600 text-lg font-semibold'>
-          Thông Báo Tạo Tài Khoản Doanh Nghiệp Trên Hệ Thống GO iGAP
+          Thông Báo Tạo Tài Khoản Trên Hệ Thống GO iGAP
         </Text>
 
         <Text className='text-gray-600'>
           Kính gửi Quý khách hàng <b>{'${requestData.fullName}'}</b>, với vai trò là Quản trị viên
-          của doanh nghiệp <b>{'${requestData.customerName}'}</b>,
+          của <b>{'${requestData.customerName}'}</b>,
         </Text>
 
         <Text className='text-gray-600'>
           Chúng tôi xin thông báo rằng tài khoản doanh nghiệp của Quý khách đã được tạo thành công
-          trên hệ thống GO iGAP bởi đội ngũ quản trị. Dưới đây là thông tin đăng nhập tạm thời cho
-          tài khoản quản trị viên. Vui lòng lưu lại thông tin này và thay đổi mật khẩu ngay sau lần
-          đăng nhập đầu tiên để đảm bảo bảo mật tài khoản.
+          trên hệ thống GO iGAP bởi đội ngũ quản trị. Để bắt đầu sử dụng tài khoản, vui lòng bấm vào
+          nút &quot;Xác Nhận Tài Khoản&quot; dưới đây.
+        </Text>
+
+        <Section className='flex justify-center my-6'>
+          <center>
+            <Button href={'${data.confirmationLink}'} variant='primary'>
+              Xác Nhận Tài Khoản
+            </Button>
+          </center>
+        </Section>
+
+        <Text className='text-gray-600'>
+          Sau khi xác nhận thành công, dưới đây là thông tin đăng nhập tạm thời cho tài khoản quản
+          trị viên. Vui lòng lưu lại thông tin này và thay đổi mật khẩu ngay sau lần đăng nhập đầu
+          tiên để đảm bảo bảo mật tài khoản.
         </Text>
 
         <Container className='bg-gray-100 rounded-lg p-4 my-4'>
@@ -62,19 +75,21 @@ export default function Page() {
           </Button>
         </Section>
 
-        <Text className='text-gray-600 mt-4'>
-          Sau khi đăng nhập, bạn nên thay đổi mật khẩu ngay lập tức trong mục cài đặt tài khoản. Nếu
-          bạn gặp vấn đề khi đăng nhập hoặc cần trợ giúp, vui lòng liên hệ với bộ phận hỗ trợ của
-          chúng tôi.
-        </Text>
-
         <Container className='bg-blue-50 rounded-lg p-4 mt-4'>
           <Text className='text-blue-800 m-0 font-medium'>Lưu ý quan trọng:</Text>
           <Text className='m-0 text-blue-700'>
             - Mật khẩu tạm thời chỉ nên được sử dụng một lần.
           </Text>
           <Text className='m-0 text-blue-700'>
-            - Nếu bạn không yêu cầu tài khoản này, vui lòng liên hệ ngay.
+            - Sử dụng mật khẩu mạnh và duy nhất cho tài khoản của bạn.
+          </Text>
+          <Text className='m-0 text-blue-700'>- Không chia sẻ mật khẩu với bất kỳ ai.</Text>
+          <Text className='m-0 text-blue-700'>- Đổi mật khẩu định kỳ để tăng cường bảo mật.</Text>
+          <Text className='m-0 text-blue-700'>
+            - Đảm bảo đăng xuất khỏi tài khoản trên các thiết bị công cộng hoặc lạ.
+          </Text>
+          <Text className='m-0 text-blue-700'>
+            - Nếu bạn không yêu cầu tài khoản này, vui lòng bỏ qua email.
           </Text>
         </Container>
 
