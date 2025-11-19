@@ -44,7 +44,7 @@ export default function Page() {
 
         <Container className='bg-gray-100 rounded-lg p-4 my-4'>
           <Text className='m-0 text-gray-700'>
-            <b>Tên người dùng:</b> {'${data.email}'}
+            <b>Tên đăng nhập:</b> {'${data.email}'}
           </Text>
           <Text className='m-0 text-gray-700'>
             <b>Mật khẩu tạm thời:</b> {'${data.password}'}
@@ -80,9 +80,7 @@ export default function Page() {
         </Container>
 
         <Text className='text-gray-600'>
-          Đây là email được gửi tự động từ hệ thống GO iGAP. Vui lòng không phản hồi trực tiếp email
-          này. Nếu có bất kỳ câu hỏi nào, xin vui lòng liên hệ với bộ phận hỗ trợ của GO iGAP hoặc
-          quản trị viên khách hàng của bạn.
+          Đây là email được gửi tự động từ hệ thống GO iGAP, không phản hồi trực tiếp email này.
         </Text>
 
         <Section className='mb-6'>

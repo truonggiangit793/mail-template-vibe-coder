@@ -32,7 +32,7 @@ export default function Page() {
 
         <Container className='bg-gray-100 rounded-lg p-4 my-4'>
           <Text className='m-0 text-gray-700'>
-            <b>Tên người dùng:</b> {'${requestData.email}'}
+            <b>Tên đăng nhập:</b> {'${requestData.email}'}
           </Text>
           <Text className='m-0 text-gray-700'>
             <b>Mật khẩu tạm thời:</b> {'${requestData.password}'}
@@ -74,7 +74,6 @@ export default function Page() {
 
         <Text className='text-gray-600'>
           Đây là email được gửi tự động từ hệ thống, vui lòng không phản hồi trực tiếp email này.
-          Nếu có bất kỳ thắc mắc nào, xin vui lòng liên hệ với bộ phận hỗ trợ hoặc admin.
         </Text>
 
         <Section className='mb-6'>

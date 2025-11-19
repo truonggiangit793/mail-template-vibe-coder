@@ -63,7 +63,6 @@ export default function Page() {
 
         <Text className='text-gray-600'>
           Đây là email được gửi tự động từ hệ thống, vui lòng không phản hồi trực tiếp email này.
-          Nếu có bất kỳ thắc mắc nào, xin vui lòng liên hệ với bộ phận hỗ trợ của GO iGAP.
         </Text>
 
         <Section className='mb-6'>
