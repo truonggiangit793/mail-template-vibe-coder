@@ -3,7 +3,6 @@ import { Container, Img, Section, Text } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
 
 import Button from '@/app/_components/Button';
-import TemplateFooter from '@/app/_components/TemplateFooter';
 
 const containerStyle: CSSProperties = { maxWidth: '50em' };
 
@@ -12,34 +11,42 @@ export default function Page() {
     <Tailwind>
       {/* Header with Logo and Company Name */}
       <Container style={containerStyle} className='px-4 pt-10 pb-6'>
-        <Img height='60' src={'https://dev-sme.igap.vn/logo-text.png'} alt='Logo' />
+        <Img height='30' src={'https://dev-sme.igap.vn/go-igap-logo.png'} alt='Logo' />
       </Container>
 
       {/* Main Content */}
       <Container style={containerStyle} className='px-4'>
         <Text className='text-gray-600 text-lg font-semibold'>
-          Lời mời sử dụng hệ thống iGap SME
+          Thông Báo Tạo Tài Khoản Doanh Nghiệp Trên Hệ Thống GO iGAP
         </Text>
 
         <Text className='text-gray-600'>
-          Xin chào <b>{'${requestData.fullName}'}</b>,
+          Kính gửi Quý khách hàng <b>{'${requestData.fullName}'}</b>, với vai trò là Quản trị viên
+          của doanh nghiệp <b>{'${requestData.customerName}'}</b>,
         </Text>
 
         <Text className='text-gray-600'>
-          Bạn vừa được tạo tài khoản và mời sử dụng hệ thống iGap SME. Dưới đây là thông tin đăng
-          nhập tạm thời của bạn. Vui lòng lưu lại thông tin này và đổi mật khẩu sau khi đăng nhập
-          lần đầu tiên để đảm bảo an toàn.
+          Chúng tôi xin thông báo rằng tài khoản doanh nghiệp của Quý khách đã được tạo thành công
+          trên hệ thống GO iGAP bởi đội ngũ quản trị. Dưới đây là thông tin đăng nhập tạm thời cho
+          tài khoản quản trị viên. Vui lòng lưu lại thông tin này và thay đổi mật khẩu ngay sau lần
+          đăng nhập đầu tiên để đảm bảo bảo mật tài khoản.
         </Text>
 
-        <Container className='bg-gray-50 rounded-lg p-4 my-4'>
+        <Container className='bg-gray-100 rounded-lg p-4 my-4'>
           <Text className='m-0 text-gray-700'>
-            <b>Họ & tên:</b> {'${requestData.fullName}'}
+            <b>Tên doanh nghiệp:</b> {'${requestData.customerName}'}
           </Text>
           <Text className='m-0 text-gray-700'>
-            <b>Email:</b> {'${requestData.email}'}
+            <b>Mã số thuế:</b> {'${requestData.taxCode}'}
+          </Text>
+          <Text className='m-0 text-gray-700'>
+            <b>Tên người dùng:</b> {'${requestData.email}'}
           </Text>
           <Text className='m-0 text-gray-700'>
             <b>Mật khẩu tạm thời:</b> {'${requestData.password}'}
+          </Text>
+          <Text className='m-0 text-gray-700'>
+            <b>Họ & tên:</b> {'${requestData.fullName}'}
           </Text>
           <Text className='m-0 text-gray-700'>
             <b>Chức vụ:</b> {'${requestData.jobPosition}'}
@@ -71,14 +78,16 @@ export default function Page() {
           </Text>
         </Container>
 
+        <Text className='text-gray-600'>
+          Đây là email được gửi tự động từ hệ thống, vui lòng không phản hồi trực tiếp email này.
+          Nếu có bất kỳ thắc mắc nào, xin vui lòng liên hệ với bộ phận hỗ trợ của GO iGAP.
+        </Text>
+
         <Section className='mb-6'>
           <Text className='text-gray-600 m-0'>Trân trọng,</Text>
-          <Text className='text-gray-800 m-0 font-semibold'>iGap SME Security Team</Text>
+          <Text className='text-gray-800 m-0 font-semibold'>GO iGAP</Text>
         </Section>
       </Container>
-
-      {/* Footer */}
-      <TemplateFooter />
     </Tailwind>
   );
 }
