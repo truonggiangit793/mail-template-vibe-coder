@@ -11,7 +11,7 @@ interface ButtonProps {
 
 const styles = {
   primary: {
-    background: 'linear-gradient(90deg, #0070f3 0%, #3791f8ff 100%)',
+    background: 'linear-gradient(90deg, #3197d4 0%, #3197d4 100%)',
     borderRadius: '100px',
     color: '#fff',
     padding: '10px 25px',

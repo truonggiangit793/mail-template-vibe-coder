@@ -9,12 +9,10 @@ const containerStyle: CSSProperties = { maxWidth: '50em' };
 export default function Page() {
   return (
     <Tailwind>
-      {/* Header with Logo and Company Name */}
-      <Container style={containerStyle} className='px-3 pt-10 pb-6'>
+      <Container style={containerStyle} className='px-4 pt-10 pb-6'>
         <Img height='30' src={'https://dev-sme.igap.vn/go-igap-logo.png'} alt='Logo' />
       </Container>
 
-      {/* Main Content */}
       <Container style={containerStyle} className='px-4'>
         <Text className='text-gray-600 text-lg font-semibold'>Xác Thực Tài Khoản</Text>
 
@@ -28,33 +26,35 @@ export default function Page() {
           bạn.
         </Text>
 
-        <Section className='flex justify-center pb-6'>
-          <Button href={'${confirmationLink}'} variant='primary'>
+        <center>
+          <Button href={'${requestData.confirmationLink}'} variant='primary'>
             Kích Hoạt Tài Khoản
           </Button>
-        </Section>
+        </center>
 
-        <Container className='bg-blue-50 rounded-lg p-6'>
-          <Text className='text-blue-800 m-0 font-medium'>
+        <Container className='bg-gray-100 rounded-lg px-4 py-3 my-4'>
+          <Text className='text-gray-800 m-0 font-medium text-xs mb-2'>
             <b>Lưu ý quan trọng:</b>
           </Text>
-          <Text className='m-0 text-blue-700'>
-            - Liên kết xác thực này chỉ có hiệu lực trong vòng 48 giờ kể từ khi bạn nhận được email
+          <Text className='m-0 text-gray-700 text-xs'>
+            • Liên kết xác thực này chỉ có hiệu lực trong vòng 48 giờ kể từ khi bạn nhận được email
             này.
           </Text>
-          <Text className='m-0 text-blue-700'>
-            - Mật khẩu tạm thời chỉ nên được sử dụng một lần.
+          <Text className='m-0 text-gray-700 text-xs'>
+            • Mật khẩu tạm thời chỉ nên được sử dụng một lần.
           </Text>
-          <Text className='m-0 text-blue-700'>- Đổi mật khẩu định kỳ để tăng cường bảo mật.</Text>
-          <Text className='m-0 text-blue-700'>
-            - Sử dụng mật khẩu mạnh và duy nhất cho tài khoản của bạn.
+          <Text className='m-0 text-gray-700 text-xs'>
+            • Đổi mật khẩu định kỳ để tăng cường bảo mật.
           </Text>
-          <Text className='m-0 text-blue-700'>- Không chia sẻ mật khẩu với bất kỳ ai.</Text>
-          <Text className='m-0 text-blue-700'>
-            - Đảm bảo đăng xuất khỏi tài khoản trên các thiết bị công cộng hoặc lạ.
+          <Text className='m-0 text-gray-700 text-xs'>
+            • Sử dụng mật khẩu mạnh và duy nhất cho tài khoản của bạn.
           </Text>
-          <Text className='m-0 text-blue-700'>
-            - Nếu bạn không yêu cầu tài khoản này, vui lòng bỏ qua email.
+          <Text className='m-0 text-gray-700 text-xs'>• Không chia sẻ mật khẩu với bất kỳ ai.</Text>
+          <Text className='m-0 text-gray-700 text-xs'>
+            • Đảm bảo đăng xuất khỏi tài khoản trên các thiết bị công cộng hoặc lạ.
+          </Text>
+          <Text className='m-0 text-gray-700 text-xs'>
+            • Nếu bạn không yêu cầu tài khoản này, vui lòng bỏ qua email.
           </Text>
         </Container>
 
