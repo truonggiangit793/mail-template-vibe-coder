@@ -37,8 +37,8 @@ export default function Page() {
             <b>Lưu ý quan trọng:</b>
           </Text>
           <Text className='m-0 text-gray-700 text-xs'>
-            • Liên kết xác thực này chỉ có hiệu lực trong vòng 48 giờ kể từ khi bạn nhận được email
-            này.
+            • Liên kết xác thực này chỉ có hiệu lực trong vòng <b>48 giờ</b> kể từ khi bạn nhận được
+            email này.
           </Text>
           <Text className='m-0 text-gray-700 text-xs'>
             • Mật khẩu tạm thời chỉ nên được sử dụng một lần.

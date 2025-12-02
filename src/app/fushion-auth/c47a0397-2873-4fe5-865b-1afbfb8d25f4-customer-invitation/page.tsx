@@ -59,8 +59,8 @@ export default function Page() {
         <Container className='bg-gray-100 rounded-lg px-4 py-3 my-4'>
           <Text className='text-gray-800 m-0 font-medium text-xs mb-2'>Lưu ý quan trọng:</Text>
           <Text className='m-0 text-gray-700 text-xs'>
-            • Liên kết xác thực này chỉ có hiệu lực trong vòng 48 giờ kể từ khi bạn nhận được email
-            này.
+            • Liên kết xác thực này chỉ có hiệu lực trong vòng <b>48 giờ</b> kể từ khi bạn nhận được
+            email này.
           </Text>
           <Text className='m-0 text-gray-700 text-xs'>
             • Mật khẩu tạm thời chỉ nên được sử dụng một lần.
